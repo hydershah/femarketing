@@ -1,0 +1,7 @@
+{
+  "/(site)/page": "app/(site)/page.js",
+  "/(site)/final-expense-leads/page": "app/(site)/final-expense-leads/page.js",
+  "/(site)/live-transfer-leads/page": "app/(site)/live-transfer-leads/page.js",
+  "/(site)/final-expense-leads-cost/page": "app/(site)/final-expense-leads-cost/page.js",
+  "/(site)/blog/page": "app/(site)/blog/page.js"
+}

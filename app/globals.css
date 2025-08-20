@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom utilities for blog */
+@layer utilities {
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* Navigation dropdown fixes */
+@layer components {
+  .nav-dropdown {
+    position: absolute !important;
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    overflow: visible !important;
+  }
+  
+  .nav-dropdown-container {
+    position: relative !important;
+    overflow: visible !important;
+  }
+
+  /* Ensure header doesn't clip dropdowns */
+  header {
+    overflow: visible !important;
+  }
+
+  /* Ensure nav container doesn't clip dropdowns */
+  nav {
+    overflow: visible !important;
+  }
+
+  /* Force dropdown visibility */
+  .nav-dropdown[style*="display: none"] {
+    display: block !important;
+  }
+}
+
+:root {
+  --container-max: 1200px;
+}
+
+.container {
+  max-width: var(--container-max);
+}
+
+
