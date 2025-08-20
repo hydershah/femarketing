@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { SEOContent } from './SEOContent'
 
 export const metadata: Metadata = {
   title: 'Final Expense Leads Cost | Pricing Calculator | Get Quote',
@@ -41,14 +42,7 @@ export const metadata: Metadata = {
 export default function PricingPage() {
   return (
     <>
-      {/* @ts-expect-error Server Component */}
       <SEOContent />
     </>
   )
-}
-
-function SEOContent() {
-  // Imported inline to keep route self-contained and server-rendered
-  const { SEOContent: Inner } = require('./SEOContent') as { SEOContent: () => JSX.Element }
-  return <Inner />
 }
